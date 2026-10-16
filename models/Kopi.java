@@ -30,9 +30,8 @@ public class Kopi extends Menu_Item implements Customizable {
             customize(arr);
         }
     }
-
     ///jgn berburuk sangka
-
+    
     public void setUkuran(EnumUkuran ukuran) {
         this.ukuran = ukuran;
     }
@@ -49,3 +48,5 @@ public class Kopi extends Menu_Item implements Customizable {
                 nama, ukuran, rumCount, esCount, gulaCount, karamelCount, hitungHargaTotal());
     }
 }
+
+
