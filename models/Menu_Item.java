@@ -16,6 +16,24 @@ public abstract class Menu_Item {
     public abstract double hitungHargaTotal();
     public abstract String getOrderDetail();
 
+     public double hitungHargaTotal(int jumlah) {
+        return hargaBase * jumlah;
+    }
+
+    public double hitungHargaTotal(int jumlah, String kodePromo) {
+        double total = hitungHargaTotal(jumlah);
+        if ("PROMO10".equalsIgnoreCase(kodePromo)) {
+            total *= 0.90;
+        } else if ("PROMO20".equalsIgnoreCase(kodePromo)) {
+            total *= 0.80; 
+        }
+        return total;
+    }
+
+    public double hitungHargaTotal(int jumlah, EnumUkuran ukuran) {
+        return (hargaBase + ukuran.getTambahanHarga()) * jumlah;
+    }
+
     public int getId() {
         return id;
     }
@@ -48,5 +66,13 @@ public abstract class Menu_Item {
         this.stok = stok;
     }
 }
+
+
+
+   
+
+   
+
+
 
 
