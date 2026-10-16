@@ -1,7 +1,6 @@
 package models;
 
 import java.util.List;
-import model.Customizable;
 
 public class Kopi extends Menu_Item implements Customizable {
     private int rumCount = 0;  

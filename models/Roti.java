@@ -1,7 +1,7 @@
 package models;
 
 import java.util.List;
-import model.Customizable;
+import models.Customizable;
 
 public class Roti extends Menu_Item implements Customizable {
     private int mesesCount = 0;   
@@ -42,7 +42,7 @@ public class Roti extends Menu_Item implements Customizable {
 
     @Override
     public String getOrderDetail() {
-        return String.format("Kopi: %s | Ukuran: %s | Gula: %d, Karamel: %d, Meses: %d | Total: Rp%.2f",
+        return String.format("Roti: %s | Ukuran: %s | Gula: %d, Karamel: %d, Meses: %d | Total: Rp%.2f",
                 nama, ukuran, gulaCount, karamelCount, mesesCount, hitungHargaTotal());
     }
 }

@@ -44,7 +44,7 @@ public class Teh extends Menu_Item implements Customizable {
 
     @Override
     public String getOrderDetail() {
-        return String.format("Kopi: %s | Ukuran: %s | Rum: %d, Es: %d, Gula: %d, Karamel: %d | Total: Rp%.2f",
+        return String.format("Teh: %s | Ukuran: %s | Boba: %d, Es: %d, Gula: %d, Karamel: %d | Total: Rp%.2f",
                 nama, ukuran, BobaCount, esCount, gulaCount, karamelCount, hitungHargaTotal());
     }
 }
