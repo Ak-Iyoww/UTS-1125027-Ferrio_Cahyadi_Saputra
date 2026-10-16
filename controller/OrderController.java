@@ -3,10 +3,9 @@ package controller;
 import exception.InputTidakValidException;
 import exception.MenuTidakDitemukanException;
 import exception.StokTidakCukupException;
-import models.*;
-
 import java.util.ArrayList;
 import java.util.List;
+import models.*;
 
 public class OrderController {
     private List<Menu_Item> menuList;
@@ -27,8 +26,19 @@ public class OrderController {
                 return item;
             }
         }
-        throw new MenuTidakDitemukanException("Error: ID Menu " + id + " tidak ditemukan!");
+        throw new MenuTidakDitemukanException("Error: ID Menu " + id + " ga ketemu mas");
     }
 
-    public Menu_Item 
+    public void ValidasiPesanan(Menu_Item item, int jumlah) throws InputTidakValidException, StokTidakCukupException {
+        if (jumlah <= 0) {
+            throw new InputTidakValidException("Error: mau mesen apa kalau 0?");
+        }
+        if (jumlah > item.getStok()) {
+            throw new StokTidakCukupException("Error: stoknya ga cukup dawg, cmn ada : " + item.getStok());
+        }
+    }
+
+    public void Transaksi(Menu_Item item, int jumlah) {
+        item.setStok(item.getStok() - jumlah);
+    }
 }

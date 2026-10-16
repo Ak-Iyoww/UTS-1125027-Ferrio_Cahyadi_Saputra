@@ -21,7 +21,7 @@ public class Kopi extends Menu_Item implements Customizable {
             this.gulaCount = Math.min(Math.max(customizations[2], 0), 5);
             this.karamelCount = Math.min(Math.max(customizations[3], 0), 5);
         }
-    }
+    } 
 
     @Override
     public void customize(List<Integer> customizations) {
@@ -30,6 +30,8 @@ public class Kopi extends Menu_Item implements Customizable {
             customize(arr);
         }
     }
+
+    ///jgn berburuk sangka
 
     public void setUkuran(EnumUkuran ukuran) {
         this.ukuran = ukuran;

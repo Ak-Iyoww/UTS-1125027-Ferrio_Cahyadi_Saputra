@@ -1,7 +1,6 @@
 package models;
 
 import java.util.List;
-import models.Customizable;
 
 public class Roti extends Menu_Item implements Customizable {
     private int mesesCount = 0;   
@@ -15,7 +14,7 @@ public class Roti extends Menu_Item implements Customizable {
 
     @Override
     public void customize(int[] customizations) {
-        if (customizations.length >= 4) {
+        if (customizations.length >= 3) {
             this.mesesCount = Math.min(Math.max(customizations[1], 0), 5);
             this.gulaCount = Math.min(Math.max(customizations[2], 0), 5);
             this.karamelCount = Math.min(Math.max(customizations[3], 0), 5);
